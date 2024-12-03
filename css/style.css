@@ -1,0 +1,384 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F8F4F1;
+    color: #4A4A4A;
+}
+
+.open-sans{
+    font-family: "Open Sans", "Roboto", "Poppins", "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    height: 100px;
+    background-color: #E2D5C4;
+    font-size: 2.1em;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.navbar{
+    flex: 1 1 100%;
+}
+
+.navbar .menu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#elso{
+    border-top: 1px solid white;
+}
+
+#elso, #masodik, #harmadik, #negyedik, #last{
+    border-bottom: 1px solid white;
+}
+
+.navbar .menu a{
+    display: block;
+    background-color: #FFD166;
+    color:#4A4A4A;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbar .menu .active, .navbar .menu a:hover{
+    background-color: #F5A880;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .menu #last{
+    margin-bottom: 2em;
+}
+
+.pictures_1, .pictures_2{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    margin-bottom: 2em;
+    justify-content: center;
+} 
+
+#budapest_satellite, #budapest_districts, #aquincum_above, #bp_ottoman, #budapest_1686, #budapest_1873, #andrassy_avenue, #chain_bridge_at_night{
+    height: 161px;
+    width: 161px;
+    border: 3px solid black;
+}
+
+.pictures_1 figure:hover, .pictures_2 figure:hover{
+    transform: scale(1.3);
+    transition: 0.45s;
+    cursor: pointer;
+}
+.index-content{
+    flex: 1 1 100%;
+}
+
+.budapest-header{
+    width: fit-content;
+    color: #7B7B7B;
+    font-size: 30px;
+    background-color: rgb(255,255,255,0.5);
+    margin-left: 25px;
+}
+
+.content-about-budapest{
+    margin: 25px;
+    padding: 0 5px 0 5px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.budapest-information{
+    text-indent: 50px;
+    line-height: 1.5em;
+}
+
+#budapest{
+    text-decoration: none;
+    color: #4A4A4A;
+    font-style: italic;
+}
+
+.links, #anonymus{
+    text-decoration: none;
+    color: #4A4A4A;
+    font-style: italic;
+}
+
+.slider {
+    width: 80%;
+    min-width: 300px;
+    margin: 50px auto;
+    object-fit: cover;
+    cursor: grabbing;
+}
+
+.slick-slide {
+    margin: 0px 5px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slick-slide img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slick-prev:before, .slick-next:before{
+    color: black;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+.buda-content, .pest-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buda-content div, .pest-content div{
+    border: 2px solid black;
+    margin-bottom: 50px;
+    flex-basis: 85%;
+    padding: 0 20px 20px 20px;
+    border-radius: 10px;
+    background-color: rgba(217, 102, 106, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buda-content div:hover, .pest-content div:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.65s;
+    background-color: rgba(255, 209, 102, 0.45);
+    color: #2E2E2E;
+}
+
+.buda-content header, .pest-content header{
+    text-align: center;
+    font-size: 30px;
+}
+
+.form{
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(217, 102, 106, 0.08);
+    padding: 20px;
+    margin-bottom: 2em;
+}
+
+.quiz{
+        flex-basis: 40%;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: rgba(217, 102, 106, 0.08);
+        padding: 20px;
+        margin-bottom: 2em;
+}
+
+.quiz_question{
+    margin: 0.5em 0 0.5em 15px;
+}
+
+.ending{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #E2D5C4;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 441px){
+    .title{
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .navbar .menu{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .navbar .menu .first{
+        flex-basis: 100%;
+    }
+    
+    .navbar .menu .second{
+        flex-basis: 50%;
+    }
+    
+    .navbar .menu .third{
+        flex-basis: 50%;
+    }
+    
+    .navbar .menu .fourth{
+        flex-basis: 50%;
+    }
+    
+    .navbar .menu .fifth{
+        flex-basis: 50%;
+    }
+
+    #masodik, #negyedik{
+        border-right: 1px solid white;
+    }
+
+    .buda-content div, .pest-content div{
+        flex-basis: 48%;
+        text-align: center;
+        font-size: 12px;
+        transform: none;
+    }
+
+    .buda-content div:hover, .pest-content div:hover{
+        transform: scale(1.04);
+    }
+
+    .matyas, .aquincum, .normafa, .andrassy, .allatkert, .vajdahunyad{
+        margin-left: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    .title{
+        font-size: 2.5em;
+    }
+
+    .navbar .menu{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar .menu .first{
+        flex-basis: 20%;
+    }
+    
+    .navbar .menu .second{
+        flex-basis: 20%;
+    }
+    
+    .navbar .menu .third{
+        flex-basis: 20%;
+    }
+    
+    .navbar .menu .fourth{
+        flex-basis: 20%;
+    }
+    
+    .navbar .menu .fifth{
+        flex-basis: 20%;
+    }
+
+    #elso, #masodik, #harmadik, #negyedik{
+        border: none;
+        border-right: 2px solid white;
+    }
+
+    #last{
+        border: none;
+    }
+
+    .content-about-budapest{
+        padding-left: 15px;
+        padding-right: 15px;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+
+    .buda-content div, .pest-content div{
+        flex-basis: 32%;
+        text-align: center;
+        transform: none;
+    }
+
+    .buda-content article, .pest-content article{
+        font-size: 15px;
+    }
+
+    .gul_baba, .nypalota{
+        margin-left: 10px;
+    }
+
+    .aquincum, .allatkert{
+        margin-right: 10px;
+    }
+
+    .buda-content div:hover, .pest-content div:hover{
+        transform: scale(1.02);
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .buda-content article, .pest-content article{
+        font-size: 16px;
+    }
+
+    .buda-content div, .pest-content div{
+        flex-basis: 30%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .buda-content div:hover, .pest-content div:hover{
+        transform: scale(1.06);
+    }
+}

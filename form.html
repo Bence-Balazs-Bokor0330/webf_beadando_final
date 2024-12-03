@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bokor Balázs Bence">
+    <meta name="copyright" content="Az oldal kizárólag tanulmányi célú.">
+    <meta name="description" content="Az oldal néhány budapesti nevezetességet mutat be, ez a form oldal.">
+    <title>Budapesti nevezetességek | Jelentkezés a túrára</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="pictures/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="pictures/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="pictures//favicon/favicon-16x16.png">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script> $(document).ready(function(){
+                $("#myform").validate({
+                    rules: {
+                        veznev: "required",
+                        kernev: "required",
+                        telszam: {
+                            required: true,
+                            minlength: 11,
+                            maxlength: 11
+                        },
+                        email_cim: {
+                            required: true,
+                            email: true
+                        },
+                        datum: "required",
+                        hirlevel: "required",
+                        elfogadas: {
+                            required: true,
+                        },
+                        },
+                        messages: {
+                            veznev: " Írja be a vezetéknevét!",
+                            kernev: " Írja be a keresztnevét!",
+                            telszam: {
+                                    required: " Adja meg a telefonszámát!",
+                                    minlength: " A telefonszám minimum 11 karakter hosszú legyen!",
+                                    maxlength: " A telefonszám maximum 11 karakter hosszú legyen!"
+                                    },
+                            datum: " Adja meg a dátumot!",
+                            email_cim: " Kérlek valós email címet adjon meg!",
+                            hirlevel: "Valamelyik lehetőséget jelölje be!",
+                            elfogadas: "Fogadja el az ÁSZF-et!"
+                    },
+                });
+            });
+    </script>
+    <style>
+        label.error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <header class="title open-sans">
+            Budapesti nevezetességek
+    </header>
+    <div class="container open-sans">
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="first"><a href="index.html" id="elso">Főoldal</a></li>
+                <li class="second"><a href="buda.html" id="masodik">Buda</a></li>
+                <li class="third"><a href="pest.html" id="harmadik">Pest</a></li>
+                <li class="fourth"><a href="#" class="active" id="negyedik">Túra</a></li>
+                <li class="fifth"><a href="quiz.html" id="last">Quiz</a></li>
+            </ul>
+        </nav>
+        <div class="form">
+            <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="myform" novalidate>
+                <div class="form-left">
+                    <label for="veznev">Vezetéknév:<br><input type="text" name="veznev" id="veznev" size="20" placeholder="Nagy"></label><br>
+                    <label for="kernev">Keresztnév:<br><input type="text" name="kernev" id="kernev" size="20" placeholder="István"></label><br>
+                    <label for="telszam">Telefonszám:<br><input type="tel" name="telszam" id="telszam" size="20" placeholder="06301234567"></label><br>
+                    <label for="email_cim">Email:<br><input type="email" name="email_cim" id="email_cim" size="20" placeholder="minta@minta.hu"></label><br>
+                    <label for="felnott">Hány felnőtt jegyet szeretne?<br><input type="number" name="felnott" id="felnott" min="0"></label><br>
+                    <label for="gyerek">Hány gyerek jegyet szeretne?<br><input type="number" name="gyerek" id="gyerek" min="0"></label><br>
+                    <label>Fizetendő: <input type="text" name="to_be_paid" id="to_be_paid" size="10" readonly></label><br>
+                    <label for="datum">Mely napon kíván a túrán résztvenni?<br><input type="date" name="datum" id="datum"></label><br>
+                    <label>Ki vezesse a túrát?
+                    <select name="turavezeto" id="turavezeto">
+                        <option value="andrassyakos">Andrássy Ákos</option>
+                        <option value="palotaspeter">Palotás Péter</option>
+                        <option value="hoshelga">Hős Helga</option>
+                        <option value="matyasmarcell">Mátyás Marcell</option>
+                    </select>
+                    </label><br>
+                </div>
+                <div class="form-right">
+                    <label>Mely nevezetességeket kíván meglátogatni?</label><br>
+                    <label for="budavari"><input type="checkbox" name="budavari" id="budavari" value="ON">Budavári Palota</label><br>
+                    <label for="matyas"><input type="checkbox" name="matyas" id="matyas" value="ON">Mátyás Templom</label><br>
+                    <label for="gul_baba"><input type="checkbox" name="gul_baba" id="gul_baba" value="ON">Gül Baba türbéje</label><br>
+                    <label for="aquincum"><input type="checkbox" name="aquincum" id="aquincum" value="ON">Aquincum</label><br>
+                    <label for="citadella"><input type="checkbox" name="citadella" id="citadella" value="ON">Citadella</label><br>
+                    <label for="normafa"><input type="checkbox" name="normafa" id="normafa" value="ON">Normafa</label><br>
+                    <label for="m1metro"><input type="checkbox" name="m1metro" id="m1metro" value="ON">Milleniumi metró</label><br>
+                    <label for="andrassy"><input type="checkbox" name="andrassy" id="andrassy" value="ON">Andrássy út</label><br>
+                    <label for="nypalota"><input type="checkbox" name="nypalota" id="nypalota" value="ON">New York-palota</label><br>
+                    <label for="allatkert"><input type="checkbox" name="allatkert" id="allatkert" value="ON">Fővárosi Állat- és Növénykert</label><br>
+                    <label for="hosoktere"><input type="checkbox" name="hosoktere" id="hosoktere" value="ON">Milleniumi emlékmű</label><br>
+                    <label><input type="checkbox" name="vajdahunyad" id="vajdahunyad" value="ON">Vajdahunyad vára</label><br>
+                    <label>Milyen színű kitűzőt szeretne?&nbsp;<input type="color" name="szin" id="szin"></label><br>
+                    <label>Szeretne feliratkozni hírlevelünkre?</label><br>
+                    <label><input type="radio" name="hirlevel" value="igen">Igen</label><br>
+                    <label><input type="radio" name="hirlevel" value="nem">Nem</label><br>
+                    <label for="elfogadas"><input type="checkbox" name="elfogadas" id="elfogadas" value="ON">ÁSZF elfogadása.</label><br>
+                    <label><input type="submit" value="Jelentkezés!"></label>
+                    <label><input type="reset" value="Visszaállítás"></label>
+                </div>
+            </form>
+        </div>
+    </div>
+        <footer class="ending open-sans">
+            <p>Az oldal kizárólag tanulmányi célú.</p>
+            <p>&copy; 2024 Bokor Balázs Bence</p>
+        </footer>
+    <script src="js/price_script.js"></script>
+</body>
+</html>
