@@ -1,6 +1,6 @@
 A weboldalt Bokor Balázs Bence készítette.
 
-A kész weblap megtalálható a https://bence-balazs-bokor0330.github.io/webfejlesztes_beadando/ oldalon.
+A kész weblap megtalálható a https://bence-balazs-bokor0330.github.io/webf_beadando_final/ oldalon.
 
 A weblap Budapest nevezetességeit kívánja bemutatni, mely először Budapest történetéből, majd Buda és Pest látnivalóiból áll, végezetül pedig egy formot, valamint egy kvízt tud kitölteni a felhaszmáló, ezzel tesztelve tudását.
 
